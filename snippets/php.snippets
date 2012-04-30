@@ -6,6 +6,8 @@ snippet phpil
 	<?php ${1} ?>
 snippet ec
 	echo "${1:string}"${2};
+snippet ethis
+	<?php echo $this->${1:something}; ?>
 snippet inc
 	include '${1:file}';${2}
 snippet inc1
@@ -69,11 +71,13 @@ snippet doc_c
 	/**
 	 * ${3:undocumented class}
 	 *
-	 * @packaged ${4:default}
-	 * @author ${5:`g:snips_author`}
+	 * @package ${4:default}
+	 * @subpackage ${5:default}
+	 * @author ${6:`g:snips_author`}
 	 */
 	${1:}class ${2:}
-	{${6}
+	{
+		${7}
 	} // END $1class $2
 # Constant Definition - post doc
 snippet doc_dp
@@ -125,9 +129,6 @@ snippet doc_h
 	 * @package ${5:default}
 	 */
 	
-	/**
-	 * Define DocBlock
-	 */
 # Interface
 snippet doc_i
 	/**
@@ -171,12 +172,23 @@ snippet if
 	if (${1:/* condition */}) {
 		${2:// code...}
 	}
+snippet ifil
+	<?php if (${1:/* condition */}): ?>
+		${2:<!-- code... -->}
+	<?php endif; ?>
 snippet ife
 	if (${1:/* condition */}) {
 		${2:// code...}
 	} else {
 		${3:// code...}
 	}
+	${4}
+snippet ifeil
+	<?php if (${1:/* condition */}): ?>
+		${2:<!-- html... -->}
+	<?php else: ?>
+		${3:<!-- html... -->}
+	<?php endif; ?>
 	${4}
 snippet else
 	else {
@@ -211,10 +223,18 @@ snippet foreach
 	foreach ($${1:variable} as $${2:value}) {
 		${3:// code...}
 	}
+snippet foreachil
+	<?php foreach ($${1:variable} as $${2:value}): ?>
+		${3:<!-- html... -->}
+	<?php endforeach; ?>
 snippet foreachk
 	foreach ($${1:variable} as $${2:key} => $${3:value}) {
 		${4:// code...}
 	}
+snippet foreachkil
+	<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>
+		${4:<!-- html... -->}
+	<?php endforeach; ?>
 snippet fun
 	${1:public }function ${2:FunctionName}(${3})
 	{
@@ -268,3 +288,7 @@ snippet getset
 	{
 		$this->_$1 = $$1;
 	}
+snippet rett
+	return true;
+snippet retf
+	return false;
