@@ -32,7 +32,7 @@ snippet class
 		${2}
 snippet module
 	module `substitute(substitute(expand('%:r'), '[/\\]','.','g'),'^\%(\l*\.\)\?','','')` (
-	)	where
+	) where
 	`expand('%') =~ 'Main' ? "\n\nmain = do\n  print \"hello world\"" : ""`
 snippet const
 	${1:name} :: ${2:a}
