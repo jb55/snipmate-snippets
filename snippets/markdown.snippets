@@ -31,21 +31,6 @@ snippet ---
 
 	${0}
 
-snippet blockquote
-	{% blockquote %}
-	${0:quote}
-	{% endblockquote %}
-
-snippet blockquote-author
-	{% blockquote ${1:author}, ${2:title} %}
-	${0:quote}
-	{% endblockquote %}
-
-snippet blockquote-link
-	{% blockquote ${1:author} ${2:URL} ${3:link_text} %}
-	${0:quote}
-	{% endblockquote %}
-
 snippet bt-codeblock-short
 	```
 	${0:code_snippet}
@@ -56,32 +41,81 @@ snippet bt-codeblock-full
 	${0:code_snippet}
 	```
 
-snippet codeblock-short
-	{% codeblock %}
-	${0:code_snippet}
-	{% endcodeblock %}
+snippet component
+	# ${1:project}
 
-snippet codeblock-full
-	{% codeblock ${1:title} lang:${2:language} ${3:URL} ${4:link_text} %}
-	${0:code_snippet}
-	{% endcodeblock %}
+	  ${2:description}
 
-snippet gist-full
-	{% gist ${1:gist_id} ${0:filename} %}
+	## Installation
 
-snippet gist-short
-	{% gist ${0:gist_id} %}
+	  Install with [component(1)](http://component.io):
 
-snippet img
-	{% img ${1:class} ${2:URL} ${3:width} ${4:height} ${5:title_text} ${0:alt_text} %}
+	    $ component install $1
 
-snippet youtube
-	{% youtube ${0:video_id} %}
+	## API
 
-# The quote should appear only once in the text. It is inherently part of it.
-# See http://octopress.org/docs/plugins/pullquote/ for more info.
 
-snippet pullquote
-	{% pullquote %}
-	${1:text} {" ${2:quote} "} ${0:text}
-	{% endpullquote %}
+
+	## License
+
+	  The MIT License (MIT)
+
+	  Copyright (c) 2014 William Casarin
+
+	  Permission is hereby granted, free of charge, to any person obtaining a copy
+	  of this software and associated documentation files (the "Software"), to deal
+	  in the Software without restriction, including without limitation the rights
+	  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	  copies of the Software, and to permit persons to whom the Software is
+	  furnished to do so, subject to the following conditions:
+
+	  The above copyright notice and this permission notice shall be included in
+	  all copies or substantial portions of the Software.
+
+	  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	  THE SOFTWARE.
+	%}
+
+snippet node
+	# ${1:project}
+
+	  ${2:description}
+
+	## Installation
+
+	  Install with npm
+
+	    $ npm install $1
+
+	## API
+
+
+
+	## License
+
+	  The MIT License (MIT)
+
+	  Copyright (c) 2014 William Casarin
+
+	  Permission is hereby granted, free of charge, to any person obtaining a copy
+	  of this software and associated documentation files (the "Software"), to deal
+	  in the Software without restriction, including without limitation the rights
+	  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+	  copies of the Software, and to permit persons to whom the Software is
+	  furnished to do so, subject to the following conditions:
+
+	  The above copyright notice and this permission notice shall be included in
+	  all copies or substantial portions of the Software.
+
+	  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+	  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+	  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+	  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+	  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+	  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+	  THE SOFTWARE.
