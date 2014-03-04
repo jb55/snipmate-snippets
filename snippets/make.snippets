@@ -2,3 +2,10 @@ snippet ifeq
 	ifeq (${1:cond0},${2:cond1})
 		${0}
 	endif
+
+snippet mocha
+  test:
+  @./node_modules/.bin/mocha \
+    --require should \
+    --reporter spec \
+    --bail
