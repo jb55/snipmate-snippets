@@ -53,7 +53,7 @@ snippet case
 	${0}
 # for (...) {...}
 snippet for
-	for (var ${2:i} = 0, l = ${1:arr}.length; $2 < l; $2 ++) {
+	for (var ${2:i} = 0, len = ${1:arr}.length; $2 < len; $2++) {
 		var ${3:v} = $1[$2];${0:}
 	}
 # for (...) {...} (Improved Native For-Loop)
@@ -131,16 +131,3 @@ snippet sdf
 			${0}
 		};
 	}
-# section comment
-snippet section
-	//===----------------------------------------------------------------------===//
-	// ${1:TITLE}
-	//===----------------------------------------------------------------------===//
-# documentation
-snippet doc
-	/**
-	 * ${1:Description.}
-	 *
-	 * @param {${2:Function}} fn
-	 * @api public
-	 */

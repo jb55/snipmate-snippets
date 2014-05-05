@@ -1,0 +1,30 @@
+
+snippet doc
+	/**
+	 * ${1:Description.}
+	 *
+	 * @param {${2:Function}} fn
+	 * @api public
+	 */
+
+snippet mocha
+	var expect = require('expect.js')
+
+	describe('test', function(){
+	  it('works', function(){
+	    ${1}
+	  });
+	});
+
+snippet forof
+  for (let ${2:x} of ${1:xs}) {
+    ${3}
+  }
+
+snippet strict
+  'use strict';
+
+  ${1}
+
+snippet exp
+  module.exports = ${1}
